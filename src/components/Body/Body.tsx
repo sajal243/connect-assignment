@@ -170,7 +170,7 @@ const Body = () => {
             if (productRef.current) {
                 observer.observe(productRef.current);
             }
-        }, 200);
+        }, 300);
 
         return () => {
             clearTimeout(timerId);
@@ -178,7 +178,7 @@ const Body = () => {
                 observer.unobserve(productRef.current);
             }
         };
-    }, [sorting]);
+    }, []);
 
     console.log("visible ", visibleCount, data.length);
 
